@@ -1,7 +1,6 @@
 import React from 'react'
 import { MdCreate, MdShare, MdClear } from 'react-icons/md'
 import { MainCard, Note, Toolbar } from './style'
-import './estilos.css'
 
 interface Props {
     text?: boolean
@@ -9,7 +8,7 @@ interface Props {
 
 const Card: React.FC<Props>= ({text}) => {
     return (
-        <Card>
+        <MainCard>
             <Note>
                 {
                     text?<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo quam assumenda quaerat laudantium. Consequatur sequi aliquam optio consectetur non expedita quas. Nobis blanditiis, quidem itaque vero in nesciunt suscipit illo.</p>
@@ -30,7 +29,7 @@ const Card: React.FC<Props>= ({text}) => {
                     <MdClear/>
                 </button>
             </Toolbar>
-        </Card>
+        </MainCard>
     )
 }
 

@@ -24,11 +24,11 @@ export const SideBar = styled.div`
     }
 `
 
-// export const CardContainer = styled.div`
-//     display: grid;
-//     grid-template-columns: repeat(5, 1fr);
-//     grid-template-rows: masonry;
-//     grid-gap: 20px;
+export const CardContainer = styled.div`
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: masonry;
+    grid-gap: 20px;
 
-//     background: black;
-// `
+    background: black;
+`
