@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
-export const CardContainer = styled.div`
+export const MainCard = styled.div`
     padding: 10px;
     background: white;
+    height: auto;
 `
 
 export const Note = styled.div`

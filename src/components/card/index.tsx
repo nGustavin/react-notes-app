@@ -1,12 +1,20 @@
 import React from 'react'
 import { MdCreate, MdShare, MdClear } from 'react-icons/md'
-import { CardContainer, Note, Toolbar } from './style'
+import { MainCard, Note, Toolbar } from './style'
+import './estilos.css'
 
-const Card: React.FC= () => {
+interface Props {
+    text?: boolean
+}
+
+const Card: React.FC<Props>= ({text}) => {
     return (
-        <CardContainer>
+        <Card>
             <Note>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt asperiores cupiditate possimus atque, porro maiores, ex vel numquam dolor veritatis vitae molestias? Non, tempore commodi. Quo reiciendis itaque beatae non.</p>
+                {
+                    text?<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo quam assumenda quaerat laudantium. Consequatur sequi aliquam optio consectetur non expedita quas. Nobis blanditiis, quidem itaque vero in nesciunt suscipit illo.</p>
+                    :<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam tenetur in amet esse at quod, alias veritatis maiores eveniet consequatur dolor placeat consequuntur possimus, ipsum accusantium voluptas, architecto sed similique.Doloremque nemo mollitia repellendus. Cumque porro corrupti impedit dolore nesciunt quas repellat asperiores beatae est quibusdam, nam sequi rem obcaecati tenetur! Ut error nulla inventore mollitia alias, modi similique aspernatur.</p>
+                }
             </Note>
 
             <Toolbar>
@@ -22,7 +30,7 @@ const Card: React.FC= () => {
                     <MdClear/>
                 </button>
             </Toolbar>
-        </CardContainer>
+        </Card>
     )
 }
 

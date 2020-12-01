@@ -1,7 +1,8 @@
 import React from 'react';
 import GlobalStyle from './styles/GlobalStyle';
-import { Container, SideBar, CardContainer } from './components/landing/style';
+import { Container, SideBar } from './components/landing/style';
 import Card from './components/card/index';
+import './components/card/estilos.css'
 
 import { MdAdd } from 'react-icons/md'
 
@@ -17,12 +18,19 @@ function App() {
             </button>
           </SideBar>
 
-          <CardContainer>
+          <div id="CardContainer">
+            <Card text/>
+            <Card/>
+            <Card text/>
+            <Card/>
+            <Card/>
+            <Card text/>
             <Card/>
             <Card/>
             <Card/>
             <Card/>
-          </CardContainer>
+            <Card text/>
+          </div>
         </Container>
       </div>
     </>
