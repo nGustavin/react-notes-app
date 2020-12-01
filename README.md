@@ -20,10 +20,10 @@ Running <code> yarn install</code> or  <code>npm install</code> inside clone fol
 
 # Colaborators
 
-![Avatar](https://avatars0.githubusercontent.com/u/37788848?s=210&u=db8029c50f9510f7384752c7f7fee516aee2459b&v=4)
+![Avatar](https://avatars0.githubusercontent.com/u/37788848?s=110&u=db8029c50f9510f7384752c7f7fee516aee2459b&v=4)
 
 [Gustavo Fernandes](https://github.com/nGustavin)
 
-![Avatar](https://avatars3.githubusercontent.com/u/38386927?s=210&u=419eec311cdb31769cece5e239f6ff514f34abe2&v=4)
+![Avatar](https://avatars3.githubusercontent.com/u/38386927?s=110&u=419eec311cdb31769cece5e239f6ff514f34abe2&v=4)
 
 [Peterson Adami](https://github.com/prize34)
