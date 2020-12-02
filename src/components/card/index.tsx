@@ -18,15 +18,15 @@ const Card: React.FC<Props>= ({text}) => {
 
             <Toolbar>
                 <button type="submit">
-                    <MdCreate/>
+                    <MdCreate size={19} fill={'white'}/>
                 </button>
 
                 <button type="submit">
-                    <MdShare/>
+                    <MdShare size={19} fill={'white'}/>
                 </button>
 
                 <button type="submit">
-                    <MdClear/>
+                    <MdClear size={19} fill={'white'}/>
                 </button>
             </Toolbar>
         </MainCard>

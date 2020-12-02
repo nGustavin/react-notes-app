@@ -13,7 +13,7 @@ function App() {
         <Container>
           <SideBar>
             <button type="submit" value="criar">
-              <MdAdd size={ 50 }/>
+              <MdAdd size={ 35 } fill={'white'}/>
             </button>
           </SideBar>
 
@@ -25,6 +25,12 @@ function App() {
             <Card/>
             <Card text/>
             <Card/>
+            <Card text/>
+            <Card/>
+            <Card text/>
+            <Card/>
+            <Card text/>
+            <Card text/>
             <Card/>
             <Card/>
             <Card/>
