@@ -3,7 +3,9 @@ import cors from 'cors'
 
 const app = express();
 
-app.get('/notes', (request, response) => {
+app.use(express.json())
+
+app.get(`/notes/`, (request, response) => {
   return response.json({message: "hello notes-app"});
 })
 
