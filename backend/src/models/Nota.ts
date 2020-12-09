@@ -1,15 +1,15 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
 
 @Entity()
-export class Nota {
+export class Note {
 
     @PrimaryGeneratedColumn()
     id: Number;
 
     @Column()
-    titulo: String;
+    title: String;
 
     @Column()
-    texto: String;
+    body: String;
 
 }
