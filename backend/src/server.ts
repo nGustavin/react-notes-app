@@ -19,7 +19,6 @@ app.put("/notes/", (request, response) => {
 app.delete("/notes/", (request, response) => {
   return response.json({message: "delete a note"})
 })
+app.use(cors)
 
 app.listen(3333)
-
-app.use(cors)
