@@ -8,24 +8,27 @@ React-Notes is an app made in ReactJS for study purposes, the UI / UX was made i
 
 <code> git clone https://github.com/nGustavin/react-notes-app </code>
 
-2st - Install the project dependencies with `yarn` or `npm`.
+After cloning, Install the project dependencies with `yarn` or `npm`:
 
 In the clone folder run: <code> cd backend && yarn install | cd .. && cd frontend && yarn install </code> to install with yarn and  <code> cd backend && npm install | cd .. && cd frontend && npm install </code> to install with npm.
+
+To start the project run <code> yarn start </code> in frontend folder and <code> yarn dev </code> in backend folder.
+
 
 
 # Techs   :globe_with_meridians:
 
-<h4> Styled-components
-<h4> TypeScript
-<h4> Express
-<h4> React-router-dom
-<h4> React-icons
-<h4> cors
-<h4> ts-node-dev
-<h4> typeorm
+<h4> * Styled-components
+<h4> * TypeScript
+<h4> * Express
+<h4> * React-router-dom
+<h4> * React-icons
+<h4> * cors
+<h4> * ts-node-dev
+<h4> * tstypeorm
 
 
-# Colaborators
+# Colaborators :heart:
 
 ![Avatar](https://avatars0.githubusercontent.com/u/37788848?s=110&u=db8029c50f9510f7384752c7f7fee516aee2459b&v=4)
 
