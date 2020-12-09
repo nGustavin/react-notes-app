@@ -10,7 +10,7 @@ React-Notes is an app made in ReactJS for study purposes, the UI / UX was made i
 
 After cloning, Install the project dependencies with `yarn` or `npm`:
 
-In the clone folder run:  <code>cd backend && yarn install | cd .. && cd frontend && yarn install</code> to install with yarn and  <code>cd backend && npm install | cd .. && cd frontend && npm install</code>  to install with npm.
+In the clone folder run:  <code>cd backend && yarn install | cd .. && cd frontend && yarn install</code> to install with yarn or <code>cd backend && npm install | cd .. && cd frontend && npm install</code>  to install with npm.
 
 To start the project run  <code>yarn start</code>  in frontend folder and  <code>yarn dev</code>  in backend folder.
 
