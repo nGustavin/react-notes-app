@@ -24,3 +24,5 @@ app.delete("/notes/", (request, response) => {
 })
 
 app.listen(3333)
+
+app.use(cors)
