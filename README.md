@@ -18,14 +18,14 @@ To start the project run <code> yarn start </code> in frontend folder and <code>
 
 # Techs   :globe_with_meridians:
 
-<h4> * Styled-components
-<h4> * TypeScript
-<h4> * Express
-<h4> * React-router-dom
-<h4> * React-icons
-<h4> * cors
-<h4> * ts-node-dev
-<h4> * tstypeorm
+<h4> - Styled-components
+<h4> - TypeScript
+<h4> - Express
+<h4> - React-router-dom
+<h4> - React-icons
+<h4> - cors
+<h4> - ts-node-dev
+<h4> - typeorm
 
 
 # Colaborators :heart:
