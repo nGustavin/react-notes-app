@@ -29,7 +29,7 @@ export default {
     async create(request: Request, response: Response) {
 
         const notesRepo = getRepository(Note)
-        
+
         const { title, body } = request.body
         const note = notesRepo.create({ title, body })
 

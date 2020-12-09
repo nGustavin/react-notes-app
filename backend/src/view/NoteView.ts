@@ -4,12 +4,10 @@ export default {
 
     render(note: Note) {
 
-        let { id, title, body } = note
-
         return {
-            id,
-            title,
-            name
+            id: note.id,
+            title: note.title,
+            body: note.body,
         }
 
     },
