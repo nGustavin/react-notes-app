@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
 import GlobalStyle from './styles/GlobalStyle';
+
 import { CardContainer, Container, SideBar } from './components/landing/style';
 import Card from './components/card/index';
 
 import { MdAdd } from 'react-icons/md'
 
+interface Note {
+  title: string,
+  body: string,
+  id: string,
+}
+
 function App() {
+
   return (
     <>
       <GlobalStyle/>
@@ -18,23 +27,7 @@ function App() {
           </SideBar>
 
           <CardContainer>
-            <Card text/>
             <Card/>
-            <Card text/>
-            <Card/>
-            <Card/>
-            <Card text/>
-            <Card/>
-            <Card text/>
-            <Card/>
-            <Card text/>
-            <Card/>
-            <Card text/>
-            <Card text/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card text/>
           </CardContainer>
         </Container>
       </div>
