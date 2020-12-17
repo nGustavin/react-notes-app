@@ -31,13 +31,14 @@ const CreateNotePopup: React.FC = () => {
         
         <form id='cardpopup' onSubmit={onSubmit}>
         <h1>Criar Nota</h1>
+        <label className="inputLabel">Titulo</label>
           <input type="text" 
             className="titleInput"
             name="title" value={title}
             onChange={e => setTitle(e.target.value)}
           />
-
-          <input type="text" 
+          <label className="inputLabel">Nota</label>
+          <textarea  
             className="bodyInput"
             name="body" value={body} 
             onChange={e => setBody(e.target.value)}
