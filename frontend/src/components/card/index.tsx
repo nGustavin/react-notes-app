@@ -31,32 +31,38 @@ const Card: Function = (): JSX.Element[] => {
 
         navigator.clipboard.writeText(shareText)
     }
-
-    return notes.map(note => {
+    
+    return notes.map(note => { 
         return (
-        <MainCard key={note.id}>
-            <Note>
-                <h1>
-                    { note?.title }
-                </h1>
+        <> 
+            <MainCard key={note.id}>
+                <Note>
+                    <h1>{ note?.title }</h1>
+                    <p>{ note?.body }</p>
+                </Note>
 
-                <p>
-                    { note?.body }
-                </p>
-            </Note>
+                <Toolbar>
+                    <button type="button"><CardPopup/></button>
+                    
 
-            <Toolbar>
-                <CardPopup/>
+                    <button type="submit">
+                        <MdShare
+                            size={19}
+                            fill={'white'}
+                            onClick={() => { shareNote(note) }}
+                        />
+                    </button>
 
-                <button type="submit">
-                    <MdShare size={19} fill={'white'} onClick={() => { shareNote(note) }}/>
-                </button>
-
-                <button type="submit" onClick={() => { deleteNote(note?.id) }}>
-                    <MdClear size={19} fill={'white'}/>
-                </button>
-            </Toolbar>
-        </MainCard>)
+                    <button type="submit" onClick={() => { deleteNote(note?.id) }}>
+                        <MdClear
+                            size={19}
+                            fill={'white'}
+                        />
+                    </button>
+                </Toolbar>
+            </MainCard>
+        </>
+        )
     })
 }
 
