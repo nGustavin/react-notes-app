@@ -5,7 +5,9 @@ import GlobalStyle from './styles/GlobalStyle';
 import { CardContainer, Container, SideBar } from './components/landing/style';
 import Card from './components/card/index';
 
+
 import { MdAdd } from 'react-icons/md'
+import CreateNotePopup from './components/createNotePopup';
 
 function App() {
 
@@ -16,7 +18,7 @@ function App() {
         <Container>
           <SideBar>
             <button type="submit" value="criar">
-              <MdAdd size={ 35 } fill={'white'}/>
+              <CreateNotePopup />
             </button>
           </SideBar>
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { MdCreate, MdShare, MdClear } from 'react-icons/md'
+import {  MdShare, MdClear } from 'react-icons/md'
 import api from '../../services/api'
 import { MainCard, Note, Toolbar } from './style'
 
@@ -34,11 +34,10 @@ const Card: Function = (): JSX.Element[] => {
     
     return notes.map(note => { 
         return (
-        <> 
             <MainCard key={note.id}>
                 <Note>
-                    <h1> { note?.title } </h1>
-                    <p>  { note?.body }  </p>
+                    <h1>{ note?.title } </h1>
+                    <p> { note?.body }  </p>
                 </Note>
 
                 <Toolbar>
@@ -61,7 +60,6 @@ const Card: Function = (): JSX.Element[] => {
                     </button>
                 </Toolbar>
             </MainCard>
-        </>
         )
     })
 }

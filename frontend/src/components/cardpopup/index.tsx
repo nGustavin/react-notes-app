@@ -27,6 +27,7 @@ const CardPopup: React.FC = () => {
 
   return (
     <Popup trigger={<MdCreate size={19} fill={'white'}/>} position="right center">
+      
       <form id='cardpopup' onSubmit={onSubmit}>
         <input type="text" 
           name="title" value={title}
