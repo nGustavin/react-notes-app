@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { MdCreate, MdShare, MdClear } from 'react-icons/md'
+import { updateExpressionStatement } from 'typescript'
 import api from '../../services/api'
 import { MainCard, Note, Toolbar } from './style'
 
@@ -19,10 +20,15 @@ const Card: Function = (): JSX.Element[] => {
       })
     }, [])
 
+    function deleteNote(id: string) {
+        const [ otherNote, setOtherNote ] = useState()
 
-    // notes.map(notes => {
-    //     return <Card key={ notes.id }/>
-    // })
+        setOtherNote(api.delete(`notes/${id}`))
+
+        useEffect(() => {
+            
+        }, [])
+    }
 
     return notes.map(note => {
         return (<MainCard key={note.id}>
@@ -45,34 +51,12 @@ const Card: Function = (): JSX.Element[] => {
                     <MdShare size={19} fill={'white'}/>
                 </button>
 
-                <button type="submit">
+                <button type="submit" onClick={() => { deleteNote(note?.id) }}>
                     <MdClear size={19} fill={'white'}/>
                 </button>
             </Toolbar>
         </MainCard>)
     })
 }
-
-/* <MainCard>
-            <Note>
-                <h1>
-                    { notes?.body }
-                </h1>
-            </Note>
-
-            <Toolbar>
-                <button type="submit">
-                    <MdCreate size={19} fill={'white'}/>
-                </button>
-
-                <button type="submit">
-                    <MdShare size={19} fill={'white'}/>
-                </button>
-
-                <button type="submit">
-                    <MdClear size={19} fill={'white'}/>
-                </button>
-            </Toolbar>
-        </MainCard> */
 
 export default Card
