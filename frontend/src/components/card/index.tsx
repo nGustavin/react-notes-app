@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { MdCreate, MdShare, MdClear } from 'react-icons/md'
-import { updateExpressionStatement } from 'typescript'
 import api from '../../services/api'
 import { MainCard, Note, Toolbar } from './style'
+
+import CardPopup from '../cardpopup'
 
 interface Note {
     title: string,
@@ -16,22 +17,24 @@ const Card: Function = (): JSX.Element[] => {
     useEffect(() => {
       api.get('notes').then(response => {
         setNotes(response.data)
-        console.log(response.data)
       })
     }, [])
 
     function deleteNote(id: string) {
-        const [ otherNote, setOtherNote ] = useState()
+        api.delete(`notes/${id}`)
 
-        setOtherNote(api.delete(`notes/${id}`))
+        setNotes(notes.filter(note => note.id != id))
+    }
 
-        useEffect(() => {
-            
-        }, [])
+    function shareNote(note: Note) {
+        let shareText = `${note.title}\n\n${note.body}\n\n\nID da Nota: ${note.id}`
+
+        navigator.clipboard.writeText(shareText)
     }
 
     return notes.map(note => {
-        return (<MainCard key={note.id}>
+        return (
+        <MainCard key={note.id}>
             <Note>
                 <h1>
                     { note?.title }
@@ -43,12 +46,10 @@ const Card: Function = (): JSX.Element[] => {
             </Note>
 
             <Toolbar>
-                <button type="submit">
-                    <MdCreate size={19} fill={'white'}/>
-                </button>
+                <CardPopup/>
 
                 <button type="submit">
-                    <MdShare size={19} fill={'white'}/>
+                    <MdShare size={19} fill={'white'} onClick={() => { shareNote(note) }}/>
                 </button>
 
                 <button type="submit" onClick={() => { deleteNote(note?.id) }}>
