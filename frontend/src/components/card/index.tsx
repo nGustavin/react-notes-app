@@ -37,8 +37,8 @@ const Card: Function = (): JSX.Element[] => {
         <> 
             <MainCard key={note.id}>
                 <Note>
-                    <h1>{ note?.title }</h1>
-                    <p>{ note?.body }</p>
+                    <h1> { note?.title } </h1>
+                    <p>  { note?.body }  </p>
                 </Note>
 
                 <Toolbar>
