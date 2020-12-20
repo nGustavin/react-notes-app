@@ -45,6 +45,7 @@ const Card: Function = (): JSX.Element[] => {
           marginRight           : '-50%',
           transform             : 'translate(-50%, -50%)'
         }
+
       };
       
 
@@ -73,7 +74,10 @@ const Card: Function = (): JSX.Element[] => {
 
                 <Toolbar>
                     <button type="button" id="editButton" onClick={openModal}>
-                        <MdEdit/>
+                        <MdEdit 
+                            size={19}
+                            fill={'white'}
+                        />
                     </button>
 
                     <Modal 
@@ -84,9 +88,14 @@ const Card: Function = (): JSX.Element[] => {
                         contentLabel="Example Modal"
                     >
                         
-                        <h2>Hello</h2>
-                        <button onClick={closeModal}>close</button>
-                        <div>I am a modal</div>
+                        <h2>Editando: {note?.title} </h2>
+                        <button onClick={closeModal}>  
+                        <MdClear
+                            size={19}
+                            fill={'black'}
+                            style={{cursor: 'pointer'}}
+                        /> </button>
+                        <div></div>
                         <form>
                             <input />
                             <button>tab navigation</button>

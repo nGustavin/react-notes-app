@@ -15,6 +15,11 @@ export const Toolbar = styled.div`
     >button {
         cursor: pointer;
     }
+
+
+    > #modalTitle{
+        color: green;
+    }
 `
 
 export const MainCard = styled.div`
