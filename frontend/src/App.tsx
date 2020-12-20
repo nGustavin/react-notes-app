@@ -7,7 +7,6 @@ import Card from './components/card/index';
 
 
 import { MdAdd } from 'react-icons/md'
-import CreateNotePopup from './components/createNotePopup';
 
 function App() {
 
@@ -18,7 +17,6 @@ function App() {
         <Container>
           <SideBar>
             <button type="submit" value="criar">
-              <CreateNotePopup />
             </button>
           </SideBar>
 

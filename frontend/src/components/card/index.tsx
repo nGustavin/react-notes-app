@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import {  MdShare, MdClear } from 'react-icons/md'
+import {  MdShare, MdClear, MdEdit } from 'react-icons/md'
 import api from '../../services/api'
 import { MainCard, Note, Toolbar } from './style'
 
-import CardPopup from '../cardpopup'
+import Modal from 'react-modal';
+
 
 interface Note {
     title: string,
@@ -12,6 +13,9 @@ interface Note {
 }
 
 const Card: Function = (): JSX.Element[] => {
+
+
+
     const [ notes, setNotes ] = useState<Note[]>([])
 
     useEffect(() => {
@@ -31,6 +35,33 @@ const Card: Function = (): JSX.Element[] => {
 
         navigator.clipboard.writeText(shareText)
     }
+
+    const customStyles = {
+        content : {
+          top                   : '50%',
+          left                  : '50%',
+          right                 : 'auto',
+          bottom                : 'auto',
+          marginRight           : '-50%',
+          transform             : 'translate(-50%, -50%)'
+        }
+      };
+      
+
+    const [modalIsOpen,setIsOpen] = React.useState(false);
+    
+
+    function openModal() {
+      setIsOpen(true);
+    }
+
+    function afterOpenModal() {
+        // subtitle.style.color = '#f00';
+      }
+    
+      function closeModal(){
+        setIsOpen(false);
+      }
     
     return notes.map(note => { 
         return (
@@ -41,7 +72,30 @@ const Card: Function = (): JSX.Element[] => {
                 </Note>
 
                 <Toolbar>
-                    <button type="button"><CardPopup/></button>
+                    <button type="button" id="editButton" onClick={openModal}>
+                        <MdEdit/>
+                    </button>
+
+                    <Modal 
+                        isOpen={modalIsOpen}
+                        onAfterOpen={afterOpenModal}
+                        onRequestClose={closeModal}
+                        style={customStyles}
+                        contentLabel="Example Modal"
+                    >
+                        
+                        <h2>Hello</h2>
+                        <button onClick={closeModal}>close</button>
+                        <div>I am a modal</div>
+                        <form>
+                            <input />
+                            <button>tab navigation</button>
+                            <button>stays</button>
+                            <button>inside</button>
+                            <button>the modal</button>
+                        </form>
+
+                    </Modal>
                     
 
                     <button type="submit">
