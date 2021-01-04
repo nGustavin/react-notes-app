@@ -120,16 +120,26 @@ export default function ModalContent() {
                   height: '100%',
                 }}>
                 <form style={{
-                  backgroundColor: 'white',
                   height: '100%',
                   display: 'flex',
                   flexDirection: 'column'
 
                 }}>
-                  <input type='texy' placeholder='Titulo'></input>
-                  <textarea></textarea>
+                  <input type='texy' placeholder='Titulo' style={{ 
+                    fontSize: '24pt',
+                    fontFamily: 'Roboto, sans-serif',
+                    borderBottom: 'solid 2px white'
+                    }}></input>
+                  <textarea style={{
+                    resize: 'none',
+                    height: '100%',
+                    width: '100%',
+                    fontSize: '16pt',
+                    fontFamily: 'Roboto, sans-serif'
+                  }}></textarea>
+                  <button>Enviar</button>
                 </form>
-                <input type="button" value="enviar"/>
+                
               </div>
 
              </div>
