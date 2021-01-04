@@ -7,6 +7,7 @@ import NoteView from '../view/NoteView'
 
 export default {
 
+
     async index(request: Request, response: Response) {
         const notesRepo = getRepository(Note)
 

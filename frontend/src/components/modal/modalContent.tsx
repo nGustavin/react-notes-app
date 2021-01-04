@@ -72,6 +72,7 @@ export default function ModalContent() {
         function closeModal(){
           setIsOpen(false);
         }
+ 
 
     return(
         <>
@@ -134,21 +135,39 @@ export default function ModalContent() {
                   height: '100%',
                 }}>
                 <form
-
-                onSubmit={handleSubmit}
-                style={{
-                  backgroundColor: 'white',
+                  style={{
                   height: '100%',
                   display: 'flex',
                   flexDirection: 'column'
-
-                }}>
-                  <input
-                    type='texy'
-                    placeholder='Titulo'></input>
-                  <textarea></textarea>
+                }}
+                  onSubmit={handleSubmit}
+                >
+                  <input 
+                    id="input-title"
+                    type='text'
+                    placeholder='Titulo'
+                    style={{ 
+                      
+                    }}
+                    value={title}
+                    onChange={e => setTitle(e.target.value)}  
+                  />
+                  
+                 
+                  <textarea
+                    style={{
+                      resize: 'none',
+                      height: '100%',
+                      width: '100%',
+                      fontSize: '16pt',
+                      fontFamily: 'Roboto, sans-serif'
+                  }}
+                  value={body}
+                  onChange={e => setBody(e.target.value)}   
+                />
+                  <button type="submit">Enviar</button>
                 </form>
-                <input type="submit" value="enviar"/>
+                
               </div>
 
              </div>
