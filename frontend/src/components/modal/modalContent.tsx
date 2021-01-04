@@ -96,7 +96,7 @@ export default function ModalContent() {
                     color: 'white',
                     fontWeight: 'normal',
                     fontFamily: 'Roboto, sans-serif'
-                  }}>
+                }}>
                     Adicionar nota
                 </h1>
                 
