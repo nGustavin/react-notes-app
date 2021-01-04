@@ -17,7 +17,7 @@ export default function ModalContent() {
     data.push(body)
 
     console.log(data)
-    
+
     
 
 
