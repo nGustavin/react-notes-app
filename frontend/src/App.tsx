@@ -102,12 +102,12 @@ function App() {
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'flex-start',
-                  
                 }}
               >
                 <h1
                   style={{
-                    color: 'white'
+                    color: 'white',
+
                   }}>
                     Adicionar nota
                 </h1>
