@@ -32,9 +32,7 @@ export default function ModalContent() {
           
         }
       };
-    
-    
-        
+
     const [modalIsOpen,setIsOpen] = useState(false);
     
       function openModal() {
@@ -61,7 +59,7 @@ export default function ModalContent() {
               onRequestClose={closeModal}
               style={customStyles}
               contentLabel="Example Modal"
-           >
+        >
             
             <div 
              className="content-container"
@@ -96,7 +94,8 @@ export default function ModalContent() {
                 <h1
                   style={{
                     color: 'white',
-
+                    fontWeight: 'normal',
+                    fontFamily: 'Roboto, sans-serif'
                   }}>
                     Adicionar nota
                 </h1>
