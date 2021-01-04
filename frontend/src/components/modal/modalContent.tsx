@@ -114,7 +114,7 @@ export default function ModalContent() {
                   backgroundColor: 'white',
                   height: '100%',
                   display: 'flex',
-                  flexDirection: 'column',
+                  flexDirection: 'column'
 
                 }}>
                   <input type="text" placeholder='Titulo'/>
