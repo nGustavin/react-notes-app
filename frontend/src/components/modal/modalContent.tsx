@@ -100,8 +100,8 @@ export default function ModalContent() {
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'flex-start',
-                }}
-              >
+                }}>
+                  
                 <h1
                   style={{
                     color: 'white',
