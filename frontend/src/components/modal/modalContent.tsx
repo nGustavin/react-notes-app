@@ -101,7 +101,6 @@ export default function ModalContent() {
                   justifyContent: 'center',
                   alignItems: 'flex-start',
                 }}>
-                  
                 <h1
                   style={{
                     color: 'white',
@@ -120,6 +119,13 @@ export default function ModalContent() {
                   width: '100%',
                   height: '100%',
                 }}>
+                <form style={{
+                  backgroundColor: 'white',
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column'
+
+                }}/>
 
                 <form>
                   <input type="text" />
