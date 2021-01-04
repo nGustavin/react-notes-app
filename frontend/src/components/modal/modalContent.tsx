@@ -3,6 +3,7 @@ import { MdAdd, MdClear } from 'react-icons/md';
 
 import Modal from 'react-modal'
 import api from '../../services/api';
+import './appStyle.css';
 
 // import { Container } from './styles';
 
@@ -132,28 +133,51 @@ export default function ModalContent() {
                   background: 'none',
                   width: '100%',
                   height: '100%',
-                }}>
-                <form style={{
-                  height: '100%',
                   display: 'flex',
-                  flexDirection: 'column'
-
+                  flexDirection: 'column',
                 }}>
-                  <input type='texy' placeholder='Titulo' style={{ 
-                    fontSize: '24pt',
-                    fontFamily: 'Roboto, sans-serif',
-                    borderBottom: 'solid 2px white'
-                    }}></input>
-                  <textarea style={{
-                    resize: 'none',
+                  <form style={{
                     height: '100%',
-                    width: '100%',
-                    fontSize: '16pt',
-                    fontFamily: 'Roboto, sans-serif'
-                  }}></textarea>
-                  <button>Enviar</button>
-                </form>
-                
+                    display: 'flex',
+                    flexDirection: 'column'
+
+                  }}>
+                    <input
+                    
+                    type='text'
+                    placeholder='Titulo'
+                    style={{ 
+                        fontSize: '24pt',
+                        fontFamily: 'Roboto, sans-serif',
+                        borderBottom: 'solid 2px white',
+                        color: 'white',
+                        padding: '5px 20px',
+                        textAlign: 'center',
+                      }}/>
+                    <textarea 
+                    placeholder='Texto aqui...'
+                    style={{
+                      resize: 'none',
+                      width: '100%',
+                      fontSize: '16pt',
+                      fontFamily: 'Roboto, sans-serif',
+                      color: 'white',
+                      padding: '10px 20px',
+                      margin: '5px auto',
+                      backgroundColor: 'hsla(0, 0%, 100%, 0.25)',
+                      borderRadius: '4px',
+                      height: '100%'
+                    }}/>
+                    
+                  </form>
+                  <button 
+                  style={{
+                    padding: '10px',
+                    border: 'white solid 1px',
+                    borderRadius: '4px',
+                    color: 'white',
+                    fontSize: '16px'
+                  }}>Enviar</button>
               </div>
 
              </div>
