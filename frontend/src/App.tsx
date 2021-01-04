@@ -13,8 +13,6 @@ import Card from './components/card/index';
 
 import ModalContent from './components/modal/modalContent';
 
-
-
 function App() {
   return (
     <>
