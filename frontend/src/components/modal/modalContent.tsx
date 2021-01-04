@@ -133,17 +133,22 @@ export default function ModalContent() {
                   width: '100%',
                   height: '100%',
                 }}>
-                <form style={{
+                <form
+
+                onSubmit={handleSubmit}
+                style={{
                   backgroundColor: 'white',
                   height: '100%',
                   display: 'flex',
                   flexDirection: 'column'
 
                 }}>
-                  <input type='texy' placeholder='Titulo'></input>
+                  <input
+                    type='texy'
+                    placeholder='Titulo'></input>
                   <textarea></textarea>
                 </form>
-                <input type="button" value="enviar"/>
+                <input type="submit" value="enviar"/>
               </div>
 
              </div>
