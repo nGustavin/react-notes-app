@@ -125,11 +125,9 @@ export default function ModalContent() {
                   display: 'flex',
                   flexDirection: 'column'
 
-                }}/>
-
-                <form>
-                  <input type="text" />
-                  <input type="text" />
+                }}>
+                  <input type='texy' placeholder='Titulo'></input>
+                  <textarea></textarea>
                 </form>
                 <input type="button" value="enviar"/>
               </div>
