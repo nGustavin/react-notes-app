@@ -110,9 +110,18 @@ export default function ModalContent() {
                   height: '100%',
                 }}  
               >
-                <form>
-                  <input type="text"/>
-                  <input type="text"/>
+                <form style={{
+                  backgroundColor: 'white',
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+
+                }}>
+                  <input type="text" placeholder='Titulo'/>
+                  <textarea style={{
+                    resize: 'none',
+                    height: '100%'
+                  }}></textarea>
                 </form>
                 <input type="button" value="enviar"/>
               </div>
