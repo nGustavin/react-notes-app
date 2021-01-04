@@ -1,22 +1,36 @@
-import React, { useState } from 'react';
+import React, { FormEvent, useState } from 'react';
 import { MdAdd, MdClear } from 'react-icons/md';
 
 import Modal from 'react-modal'
+import api from '../../services/api';
 
 // import { Container } from './styles';
 
 
 export default function ModalContent() {
 
-    const [ title, setTitle ] = useState()
-    const [ body, setBody ] = useState()
+    const [ title, setTitle ] = useState('')
+    const [ body, setBody ] = useState('')
 
-    let data = []
+    
 
-    data.push(title)
-    data.push(body)
 
-    console.log(data)
+
+    async function handleSubmit(event: FormEvent){
+
+      event.preventDefault()
+
+      const data = new FormData
+
+      data.append('title', title)
+      data.append('body', body)
+
+      console.log({title, body})
+
+
+      await api.post('/notes', data)
+      alert('nota cadastrada!')
+    }
 
     
 
