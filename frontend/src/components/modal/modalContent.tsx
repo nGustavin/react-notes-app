@@ -8,6 +8,17 @@ import Modal from 'react-modal'
 
 export default function ModalContent() {
 
+    const [ title, setTitle ] = useState()
+    const [ body, setBody ] = useState()
+
+    let data = []
+
+    data.push(title)
+    data.push(body)
+
+    console.log(data)
+    
+    
 
 
     const customStyles = {
@@ -108,20 +119,17 @@ export default function ModalContent() {
                   background: 'none',
                   width: '100%',
                   height: '100%',
-                }}  
-              >
+                }}>
+
                 <form>
-                  <input type="text"/>
-                  <input type="text"/>
+                  <input type="text" />
+                  <input type="text" />
                 </form>
                 <input type="button" value="enviar"/>
               </div>
 
              </div>
-              
-
          </Modal> 
-        
          </>
     )
 }
