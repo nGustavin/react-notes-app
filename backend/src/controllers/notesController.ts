@@ -29,11 +29,15 @@ export default {
 
     async create(request: Request, response: Response) {
 
-        const notesRepo = getRepository(Note)
-
         const { title, body } = request.body
-        const note = notesRepo.create({ title, body })
+        
+        const notesRepo = getRepository(Note)
+        
+        const data = {title, body}
 
+        
+        const note = notesRepo.create(data)
+    
         await notesRepo.save(note)
 
         return response.status(201).json(note)
