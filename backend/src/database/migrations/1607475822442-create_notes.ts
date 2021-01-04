@@ -13,6 +13,8 @@ export class createNotes1607475822442 implements MigrationInterface {
                     isPrimary: true,
                     isGenerated: true,
                     generationStrategy: "increment",
+
+                    
                 },
                 {
                     name: "title",

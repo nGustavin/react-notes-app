@@ -73,6 +73,7 @@ export default function ModalContent() {
         function closeModal(){
           setIsOpen(false);
         }
+ 
 
     return(
         <>
