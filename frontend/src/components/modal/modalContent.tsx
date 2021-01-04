@@ -8,6 +8,17 @@ import Modal from 'react-modal'
 
 export default function ModalContent() {
 
+    const [ title, setTitle ] = useState()
+    const [ body, setBody ] = useState()
+
+    let data = []
+
+    data.push(title)
+    data.push(body)
+
+    console.log(data)
+
+    
 
 
     const customStyles = {
@@ -89,8 +100,7 @@ export default function ModalContent() {
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'flex-start',
-                }}
-              >
+                }}>
                 <h1
                   style={{
                     color: 'white',
@@ -108,29 +118,24 @@ export default function ModalContent() {
                   background: 'none',
                   width: '100%',
                   height: '100%',
-                }}  
-              >
+                }}>
                 <form style={{
                   backgroundColor: 'white',
                   height: '100%',
                   display: 'flex',
                   flexDirection: 'column'
 
-                }}>
-                  <input type="text" placeholder='Titulo'/>
-                  <textarea style={{
-                    resize: 'none',
-                    height: '100%'
-                  }}></textarea>
+                }}/>
+
+                <form>
+                  <input type="text" />
+                  <input type="text" />
                 </form>
                 <input type="button" value="enviar"/>
               </div>
 
              </div>
-              
-
          </Modal> 
-        
          </>
     )
 }
