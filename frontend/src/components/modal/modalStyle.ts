@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components'
+import styled from 'styled-components'
 
 
 export const ContentContainer = styled.div`
@@ -21,7 +21,7 @@ export const Title = styled.div`
     justify-content: center;
     align-items: flex-start;
 
-    >h1 {
+    > h1 {
         color: white;
         font-weight: 300;
         font-size: 45px;
@@ -77,6 +77,8 @@ export const Body = styled.div`
             border-radius: 4px;
             height: 100%;
             transition: 0.5s;
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
 
             :hover{
                 border-bottom: solid 2px rgba(255, 255, 255, 1);
