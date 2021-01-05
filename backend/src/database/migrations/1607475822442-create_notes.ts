@@ -33,5 +33,4 @@ export class createNotes1607475822442 implements MigrationInterface {
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.dropTable("Notes")
     }
-
 }

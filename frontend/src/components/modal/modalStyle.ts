@@ -135,7 +135,7 @@ button:hover{
 `
 
 export const CreateNote = styled.button`
-
+    outline: none;
 `
 
 export const modalStyles = {

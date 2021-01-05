@@ -73,7 +73,7 @@ return(
               style={{position: 'absolute', top: '2%', left: '95%'}}
             />
             <Title>
-              <h1>Adicionar nota</h1>
+              <h1>New Note</h1>
             </Title>
             <Body>
                 <form onSubmit={handleSubmit}>
