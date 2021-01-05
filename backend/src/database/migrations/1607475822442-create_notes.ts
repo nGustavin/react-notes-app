@@ -20,11 +20,13 @@ export class createNotes1607475822442 implements MigrationInterface {
                     name: "title",
                     type: "varchar",
                     onUpdate: "CASCADE",
+                    // isNullable: true,
                 },
                 {
                     name: "body",
                     type: "varchar",
                     onUpdate: "CASCADE",
+                    // isNullable: true,
                 }
             ]
          }))
