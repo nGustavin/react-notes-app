@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {  MdShare, MdClear, MdEdit } from 'react-icons/md'
 import api from '../../services/api'
-import { MainCard, Note, Toolbar } from './style'
+import { MainCard, CardInfo, Toolbar } from './style'
 
 import Modal from 'react-modal';
 
@@ -27,12 +27,11 @@ const Card: Function = (): JSX.Element[] => {
     function deleteNote(id: string) {
         api.delete(`notes/${id}`)
 
-        setNotes(notes.filter(note => note.id != id))
+        setNotes(notes.filter(note => note.id !== id))
     }
 
     function shareNote(note: Note) {
         let shareText = `${note.title}\n\n${note.body}\n\n\nID da Nota: ${note.id}`
-
         navigator.clipboard.writeText(shareText)
     }
 
@@ -67,10 +66,10 @@ const Card: Function = (): JSX.Element[] => {
     return notes.map(note => { 
         return (
             <MainCard key={note.id}>
-                <Note>
+                <CardInfo>
                     <h1>{ note?.title } </h1>
                     <p> { note?.body }  </p>
-                </Note>
+                </CardInfo>
 
                 <Toolbar>
                     <button type="button" id="editButton" onClick={openModal}>

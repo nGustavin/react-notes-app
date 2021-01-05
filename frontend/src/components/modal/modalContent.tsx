@@ -15,9 +15,7 @@ export default function ModalContent() {
 
 // End of Form const's declaration
 
-  async function handleSubmit(event: FormEvent){
-
-    event.preventDefault()
+  async function handleSubmit(){
 
     const data = new FormData()
 
@@ -27,8 +25,7 @@ export default function ModalContent() {
     console.log({title, body})
 
 
-    await api.post('/notes', data)
-    alert('nota cadastrada!')
+    await api.post('/notes', {title, body})
   }
 
 // End of handle Submit function
@@ -77,10 +74,22 @@ return(
             </Title>
             <Body>
                 <form onSubmit={handleSubmit}>
-                  <input type='text' placeholder='Ex: Wish List'/>
-                  <textarea placeholder='smartphone, car, house...' />
+                  <input
+                    name="title"
+                    type='text'
+                    placeholder='Ex: Wish List'
+                    value={title}
+                    onChange={e => setTitle(e.target.value)}
+                  />
+
+                  <textarea
+                    name="title"
+                    placeholder='smartphone, car, house...'
+                    value={body}
+                    onChange={e => setBody(e.target.value)}
+                  />
                 </form>
-                <button type="submit">Create</button>
+                <button type="submit" onClick={handleSubmit}>Create</button>
             </Body>
           </ContentContainer>
       </Modal> 

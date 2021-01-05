@@ -50,7 +50,7 @@ export const MainCard = styled.div`
     }
 `
 
-export const Note = styled.div`
+export const CardInfo = styled.div`
     width: 100%;
 
     >p {
