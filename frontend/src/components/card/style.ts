@@ -54,15 +54,15 @@ export const Note = styled.div`
     width: 100%;
 
     >p {
-        font-family: 'Roboto', sans-serif;
-        color: white;
+        font-family: 'Quicksand', sans-serif;
+        color: rgba(255, 255, 255, 0.8);
         font-size: 16px;
-
+        font-weight: 600;
         text-align: left;
     }
 
     >h1 {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Quicksand', sans-serif;
         color: white;
         font-size: 18px;
 
