@@ -27,7 +27,7 @@ export const MainCard = styled.div`
     background: white;
     height: auto;
 
-    min-height: 300px;
+    /* min-height: 300px; */
     min-width: 200px;
 
     display: flex;
@@ -43,7 +43,6 @@ export const MainCard = styled.div`
     :hover {
         background: #6B3DFF;
         box-shadow: 0px 0px 0px 2px white;
-
         >${Toolbar} {
             opacity: 1;
         }

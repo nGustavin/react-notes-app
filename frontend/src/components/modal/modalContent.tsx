@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-modal'
 
 import api from '../../services/api';
@@ -26,6 +26,8 @@ export default function ModalContent() {
 
 
     await api.post('/notes', {title, body})
+    closeModal()
+    window.location.reload()
   }
 
 // End of handle Submit function
