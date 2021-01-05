@@ -69,7 +69,7 @@ return(
               fill={'white'}
               size={23}
               onClick={closeModal}
-              style={{position: 'absolute', top: '2%', left: '95%'}}
+              style={{position: 'absolute', top: '2%', left: '95%', cursor: 'pointer'}}
             />
             <Title>
               <h1>New Note</h1>

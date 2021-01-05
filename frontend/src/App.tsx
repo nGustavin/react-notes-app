@@ -11,7 +11,7 @@ import Card from './components/card/index';
 // JSX html => JS
 // TSX html => TS
 
-import ModalContent from './components/modal/modalContent';
+import ModalContent from './components/modalCreateNote/modalContent';
 
 function App() {
   return (
