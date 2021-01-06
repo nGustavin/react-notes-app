@@ -16,10 +16,6 @@ export const Toolbar = styled.div`
         cursor: pointer;
     }
 
-
-    > #modalTitle{
-        color: green;
-    }
 `
 
 export const MainCard = styled.div`

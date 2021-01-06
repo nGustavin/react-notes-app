@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import {  MdShare, MdClear, MdEdit } from 'react-icons/md'
+import {  MdShare, MdClear } from 'react-icons/md'
 import api from '../../services/api'
 import { MainCard, CardInfo, Toolbar } from './style'
-
-import Modal from 'react-modal';
+import EditModal from './editNoteModal/index'
 
 interface Note {
     title: string,
@@ -32,33 +31,6 @@ const Card: Function = (): JSX.Element[] => {
         navigator.clipboard.writeText(shareText)
     }
 
-    const customStyles = {
-        content : {
-          top                   : '50%',
-          left                  : '50%',
-          right                 : 'auto',
-          bottom                : 'auto',
-          marginRight           : '-50%',
-          transform             : 'translate(-50%, -50%)'
-        }
-      };
-      
-
-    const [modalIsOpen,setIsOpen] = React.useState(false);
-    
-
-    function openModal() {
-      setIsOpen(true);
-    }
-
-    function afterOpenModal() {
-        // subtitle.style.color = '#f00';
-      }
-    
-      function closeModal(){
-        setIsOpen(false);
-      }
-    
     return notes.map(note => { 
         return (
             <MainCard key={note.id}>
@@ -68,53 +40,20 @@ const Card: Function = (): JSX.Element[] => {
                 </CardInfo>
 
                 <Toolbar>
-                    <button type="button" id="editButton" onClick={openModal}>
-                        <MdEdit 
-                            size={19}
-                            fill={'white'}
-                        />
-                    </button>
+                    <EditModal/>
 
-                    <Modal 
-                        isOpen={modalIsOpen}
-                        onAfterOpen={afterOpenModal}
-                        onRequestClose={closeModal}
-                        style={customStyles}
-                        contentLabel="Example Modal"
-                    >
-                        
-                        <h2>Editando: {note?.title} </h2>
-                        <button onClick={closeModal}>  
-                        <MdClear
-                            size={19}
-                            fill={'black'}
-                            style={{cursor: 'pointer'}}
-                        /> </button>
-                        <div></div>
-                        <form>
-                            <input />
-                            <button>tab navigation</button>
-                            <button>stays</button>
-                            <button>inside</button>
-                            <button>the modal</button>
-                        </form>
-
-                    </Modal>
-                    
-                    <button type="submit">
                         <MdShare
                             size={19}
                             fill={'white'}
                             onClick={() => { shareNote(note) }}
+                            style={{cursor: 'pointer'}}
                         />
-                    </button>
-
-                    <button type="submit" onClick={() => { deleteNote(note?.id) }}>
                         <MdClear
+                            onClick={() => { deleteNote(note?.id) }}
                             size={19}
                             fill={'white'}
+                            style={{cursor: 'pointer'}}
                         />
-                    </button>
                 </Toolbar>
             </MainCard>
         )
