@@ -5,7 +5,6 @@ import { MainCard, CardInfo, Toolbar } from './style'
 
 import Modal from 'react-modal';
 
-
 interface Note {
     title: string,
     body: string,
@@ -13,8 +12,6 @@ interface Note {
 }
 
 const Card: Function = (): JSX.Element[] => {
-
-
 
     const [ notes, setNotes ] = useState<Note[]>([])
 
@@ -44,7 +41,6 @@ const Card: Function = (): JSX.Element[] => {
           marginRight           : '-50%',
           transform             : 'translate(-50%, -50%)'
         }
-
       };
       
 
@@ -67,8 +63,8 @@ const Card: Function = (): JSX.Element[] => {
         return (
             <MainCard key={note.id}>
                 <CardInfo>
-                    <h1>{ note?.title } </h1>
-                    <p> { note?.body }  </p>
+                    <h1> { note?.title } </h1>
+                     <p> { note?.body }  </p>
                 </CardInfo>
 
                 <Toolbar>
@@ -105,7 +101,6 @@ const Card: Function = (): JSX.Element[] => {
 
                     </Modal>
                     
-
                     <button type="submit">
                         <MdShare
                             size={19}

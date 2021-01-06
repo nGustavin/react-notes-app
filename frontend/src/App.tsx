@@ -6,14 +6,13 @@ import GlobalStyle from './styles/GlobalStyle';
 import { CardContainer, Container, SideBar } from './components/landing/style';
 import Card from './components/card/index';
 
-
-
 // JSX html => JS
 // TSX html => TS
 
 import ModalContent from './components/modalCreateNote/modalContent';
 
 function App() {
+
   return (
     <>
       <GlobalStyle/>
@@ -23,7 +22,7 @@ function App() {
             <ModalContent />    
           </SideBar>
 
-          <CardContainer>
+            <CardContainer>
             
             <Card/>
           </CardContainer>

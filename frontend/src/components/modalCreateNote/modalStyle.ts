@@ -10,7 +10,7 @@ export const ContentContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     
-   
+
 `
 
 export const Title = styled.div`
@@ -118,22 +118,6 @@ export const Body = styled.div`
         }
     }
 
-  
-
-
-/* ::placeholder{
-color: white;
-opacity: 1
-}
-
-button{
-    transition-duration: 0.5s;
-}
-
-button:hover{
-    background-color: white;
-    color: black;
-} */
 `
 
 export const CreateNote = styled.button`
