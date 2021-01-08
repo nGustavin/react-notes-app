@@ -10,21 +10,38 @@ interface Note {
     id: string,
 }
 
-interface Params {
-  id: string;
-}
-
 export default function EditModal() {
 
     const [ notes, setNotes ] = useState<Note>()
 
+    const [ title, setTitle ] = useState('')
+    const [ body, setBody ] = useState('')
+    
     
 
-    useEffect(() => {
-      api.get(`notes`).then(response => {
-        setNotes(response.data)
-      })
-    }, [])
+
+    // useEffect(() => {
+    //   api.get(`notes`).then(response => {
+    //     setNotes(response.data)
+    //   })
+    // }, [])
+
+    async function handleEditNote(id: string){
+
+      const data = new FormData()
+
+      data.append('title', title)
+      data.append('body', body)
+
+      
+      await api.put(`notes/${id}`, {title, body})
+      
+      closeModal()
+      
+      window.location.reload()
+
+      window.alert('nota editada com sucesso')
+    }
 
     
     const [modalIsOpen,setIsOpen] = React.useState(false);
@@ -32,7 +49,6 @@ export default function EditModal() {
 
     function openModal() {
       setIsOpen(true);
-      console.log(notes)
     }
 
     function afterOpenModal() {
@@ -75,16 +91,18 @@ export default function EditModal() {
                     name="title"
                     type='text'
                     placeholder='Ex: Wish List'
-                    
+                    value={title}
+                    onChange={e => setTitle(e.target.value)}
                   />
 
                   <textarea
-                    name="title"
+                    name="body"
                     placeholder='smartphone, car, house...'
-                    
+                    value={body}
+                    onChange={e => setBody(e.target.value)}
                   />
                 </form>
-                <button type="submit" >Create</button>
+                <button type="submit" onClick={() => {return(handleEditNote)}}>Create</button>
             </Body>
           </ContentContainer>
       </Modal> 
