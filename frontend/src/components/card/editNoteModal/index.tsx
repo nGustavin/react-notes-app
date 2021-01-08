@@ -4,7 +4,6 @@ import Modal from 'react-modal';
 import api from '../../../services/api'
 import { ContentContainer, Body, Title, customStyles  } from './styles'
 
-
 interface Note {
     title: string,
     body: string,

@@ -56,4 +56,17 @@ export default {
 
     },
 
+    async edit(request: Request, response: Response) {
+        const notesRepo = getRepository(Note)
+
+        const { id } = request.params
+
+        const data = request.body
+
+        await notesRepo.update(id, data)
+
+        return response.json({message: "Updated"})
+
+    }
+
 }
