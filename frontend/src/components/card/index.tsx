@@ -40,7 +40,7 @@ const Card: Function = (): JSX.Element[] => {
                 </CardInfo>
 
                 <Toolbar>
-                    <EditModal/>
+                    <EditModal noteId={note.id}/>
 
                         <MdShare
                             size={19}

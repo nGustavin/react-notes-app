@@ -10,21 +10,27 @@ interface Note {
     id: string,
 }
 
-export default function EditModal() {
+export default function EditModal(props: any) {
 
-    const [ notes, setNotes ] = useState<Note>()
+    //const [ notes, setNotes ] = useState<Note>()
 
     const [ title, setTitle ] = useState('')
     const [ body, setBody ] = useState('')
-    
+
     
 
+    useEffect(() => {
+      getAllNotes()
+    }, [])
 
-    // useEffect(() => {
-    //   api.get(`notes`).then(response => {
-    //     setNotes(response.data)
-    //   })
-    // }, [])
+    async function getAllNotes(){
+      api.get(`/notes/` + props.noteId)
+        .then(res => {
+          setTitle(res.data.title)
+          setBody(res.data.body)
+
+        })
+    }
 
     async function handleEditNote(id: string){
 
@@ -53,6 +59,7 @@ export default function EditModal() {
 
     function afterOpenModal() {
         // subtitle.style.color = '#f00';
+        console.log('Note id = ' + props.noteId)
       }
     
     function closeModal(){
@@ -73,7 +80,7 @@ export default function EditModal() {
             onRequestClose={closeModal}
             style={customStyles}
             contentLabel="Example Modal"
-      >
+        >
           
           <ContentContainer>
             <MdClear
@@ -83,7 +90,7 @@ export default function EditModal() {
               style={{position: 'absolute', top: '2%', left: '95%', cursor: 'pointer'}}
             />
             <Title>
-              <h1>New Note</h1>
+              <h1>Edit Note</h1>
             </Title>
             <Body>
                 <form>
@@ -102,7 +109,7 @@ export default function EditModal() {
                     onChange={e => setBody(e.target.value)}
                   />
                 </form>
-                <button type="submit" onClick={() => {return(handleEditNote)}}>Create</button>
+                <button type="submit" onClick={() => handleEditNote(props.noteId)}>Edit</button>
             </Body>
           </ContentContainer>
       </Modal> 

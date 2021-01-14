@@ -18,14 +18,15 @@ function App() {
       <GlobalStyle/>
       <div className="app">
         <Container>
+          
           <SideBar>
             <ModalContent />    
           </SideBar>
 
-            <CardContainer>
-            
+          <CardContainer>
             <Card/>
           </CardContainer>
+
         </Container>
       </div>
     </>
