@@ -5,8 +5,10 @@ export const Container = styled.div`
     height: 100vh;
 
     display: flex;
-
-    background-color: #11054E;
+    //background-color: #11054e;
+    background: linear-gradient(193deg, rgba(17,5,78,1) 0%, rgba(232,20,108,1) 100%); 
+    background-size: 600% 600%;
+    animation: animatedBackground 10s ease infinite;
 `
 
 export const SideBar = styled.div` 
